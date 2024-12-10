@@ -1,0 +1,157 @@
+/* Reset básico para asegurar consistencia en todos los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos del cuerpo */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Contenedor principal */
+  main {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  /* Título */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4a90e2;
+  }
+  
+  /* Área de interacción */
+  .interaction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .instructions {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  #user-input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+  }
+  
+  #user-input:focus {
+    border-color: #4a90e2;
+    outline: none;
+  }
+  
+  #submit-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4a90e2;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #submit-btn:hover {
+    background-color: #357ABD;
+  }
+  
+  /* Área de chat */
+  .chat-output {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+  }
+  
+  /* Mensajes del chat */
+  .message {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message strong {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #4a90e2;
+  }
+  
+  .message p {
+    background-color: #f1f0f0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+  
+  /* Estilo para mensajes del usuario */
+  .message.user p {
+    background-color: #d1e7dd;
+    align-self: flex-end;
+    color: #0f5132;
+  }
+  
+  /* Estilo para mensajes de la IA */
+  .message.ia p {
+    background-color: #f8d7da;
+    align-self: flex-start;
+    color: #842029;
+  }
+  
+  /* Scroll personalizado */
+  .chat-output::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .chat-output::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  .chat-output::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+  }
+  
+  .chat-output::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 600px) {
+    main {
+      padding: 15px;
+    }
+  
+    #submit-btn {
+      width: 100%;
+    }
+  
+    .message p {
+      max-width: 100%;
+    }
+  }
+  

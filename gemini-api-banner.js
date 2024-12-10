@@ -1,5 +1,4 @@
-export function maybeShowApiKeyBanner(key, action = `enter it at the top of
-<code>main.js</code>`) {
+export function maybeShowApiKeyBanner(key, action = `enter it at the top of <code>main.js</code>`) {
   if (key === 'TODO') {
     let banner = document.createElement('div');
     banner.className = 'api-key-banner';
